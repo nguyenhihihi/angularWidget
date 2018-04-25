@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xz-6">
+    <div class="form-group">
+      <label for="dataSource" class="control-label">Data source:</label>
+      <select placeholder="select" id="dataSource" class="form-control" (change)="changeDataSource()" [(ngModel)]="datasourceName">
+          <option value="SOURCE_CONTACT">Contact</option>
+          <option value="SOURCE_STOCK">Stock</option>
+        </select>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xz-6"></div>
+</div>
+<!-- 
+<div class="row">
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xz-6">
+    <label>Columns:</label><br />
+    <div id="div1" (drop)="drop($event)" (dragover)="allowDrop($event)">
+      <p draggable="true" (dragstart)="drag($event)" id="drag1" width="88" height="31">test</p>
+        <p *ngFor = "let col of getAllColumn()" draggable="true" (dragstart)="drag($event)" [id]="col.id" width="88" height="31">{{col.col}}</p>
+      </div>
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xz-6">
+      <label>Selected columns:</label> <br>
+      <div id="div2" (drop)="drop($event)" (dragover)="allowDrop($event)" [(ngModel)] = "data"></div>
+  </div>
+</div> -->
+
+<!-- <div class="row">
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xz-6">
+    <label>Columns:</label><br />
+    <div id="div1" (drop)="drop($event)" (dragover)="allowDrop($event)">
+      <p draggable="true" (dragstart)="drag($event)" id="drag1" width="88" height="31">test</p>
+      </div>
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xz-6">
+      <label>Selected columns:</label> <br>
+      <div id="div2" (drop)="drop($event)" (dragover)="allowDrop($event)" [(ngModel)] = "data"></div>
+  </div>
+</div> -->

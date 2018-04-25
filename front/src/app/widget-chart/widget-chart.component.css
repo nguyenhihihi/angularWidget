@@ -1,0 +1,113 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400);
+.widget {
+    min-width: 350px;
+    min-height: 250px;
+    border: 1px solid	#C1C1C1;
+    display: inline-block;
+    margin: 10px 10px 0px 0px;
+    /* max-width: 380px;
+    max-height: 280px; */
+}
+
+.full {  
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100vw - 20px);
+    height: calc(100vh - 20px);
+    margin: 0px;
+    z-index: 50;
+}
+.chartBody{
+    background-color: 	#ffffff;
+    /* min-height: 248px; */
+    position: relative;
+    text-align: center;
+}
+
+.dataBody{
+    background-color: 	#ffffff;
+    position: relative;
+}
+
+.body{
+    overflow: auto;
+    /* width: 350px; */
+    height: 240px;
+    float: left;
+    width: 100%;
+    min-width: 315px;
+    min-height: 215px;
+}
+
+
+
+.chart-text {
+  font: 3px/1.4em "Montserrat", Arial, sans-serif;
+  font-weight: bold;
+  fill: #000;
+  -moz-transform: translateY(0.25em);
+  -ms-transform: translateY(0.25em);
+  -webkit-transform: translateY(0.25em);
+  transform: translateY(0.25em);
+}
+
+.chart-number {
+  font-size: 0.6em;
+  line-height: 1;
+  text-anchor: middle;
+  -moz-transform: translateY(-0.25em);
+  -ms-transform: translateY(-0.25em);
+  -webkit-transform: translateY(-0.25em);
+  transform: translateY(-0.25em);
+}
+
+.chart-label {
+  font-size: 0.2em;
+  text-transform: uppercase;
+  text-anchor: middle;
+  -moz-transform: translateY(0.7em);
+  -ms-transform: translateY(0.7em);
+  -webkit-transform: translateY(0.7em);
+  transform: translateY(0.7em);
+}
+
+
+.figure-key {
+    min-width: calc(8 / 12);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+  }
+
+  .figure-key-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+    margin-left: 30px;
+  }
+
+  .shape-circle {
+    display: inline-block;
+    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+  }
+ 
+  .bigsize{
+    font-size: 200%;
+    color: #e63900;
+  }

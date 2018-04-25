@@ -1,0 +1,9 @@
+<div class= "widgetHeader">
+  <div class= "displayInlineBlock widget__header__text">
+     {{Name}}
+  </div>
+      
+  <div class = "displayInlineBlock widget__header__icon">
+      <app-widget-icon [mode] = "mode" [Type]="Type" [isFullScreen]="isFullScreen" (deleteWidget)="deleteWidgetAtHeaderComponent()" (editWidget)="editWidgetAtWidgetHeaderCom()" (switchFullScreen)="switchFullScreenAtWidgetHeaderCom()"></app-widget-icon>
+  </div>
+</div>

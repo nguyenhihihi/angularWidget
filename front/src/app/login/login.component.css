@@ -1,0 +1,35 @@
+.login-action-row {
+    margin: 10px 0 0 0;
+  }
+  
+  .widthGroupLogin {
+    width: 100%;
+  }
+  
+  .paddingBottom {
+    margin-bottom: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  .center {
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 545;
+  }
+  
+  .noPadding {
+    padding: 0;
+  }
+  
+  .marginLeft {
+    margin-left: 15px;
+  }
+  
+  .error {
+    color: red;
+  }
+
+  .block {
+      display: block;
+  }

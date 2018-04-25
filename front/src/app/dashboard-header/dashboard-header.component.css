@@ -1,0 +1,31 @@
+.header {
+    background: #1F537B;
+    color: white;
+    height: 30px;
+    width: 100%;
+    padding: 0px;
+}
+
+.noSpace {
+    padding: 0px;
+    margin: 0px;
+}
+
+.dropDown {
+    background: transparent;
+    border: none;
+    color: white;
+}
+
+.inline-block{
+    display: inline-block;
+}
+
+.color{
+    background: transparent;
+    border: none;
+}
+
+.paddingLeft{
+    padding-left: 0px;
+}

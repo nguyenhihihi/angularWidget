@@ -1,0 +1,21 @@
+<div [class]="isFullScreen ? 'full' : 'widget'" [style.width] = "isFullScreen ? '':widget.Width + 'px'" [style.height] = "isFullScreen ? '':widget.Height + 'px'">
+  <app-widget-header [Name]="widget.Name" [mode]= "mode" [Type]="widget.Type" [isFullScreen]="isFullScreen" (deleteWidget)="deleteWidgetAtDatabaseCom()" (editWidget) = "switchPopUp()" (switchFullScreen) = "switchFullScreen()"></app-widget-header>
+  <!-- <div [innerHTML] = "renderTableHTML()" class = "body dataBody"></div> -->
+  <div class = "body dataBody" [style.height] = "isFullScreen ? '80%':(widget.Height - 30) + 'px'">      
+      <table id="example" class="table table-striped table-bordered" style="width:100%">
+          <thead>
+              <tr>
+                <th *ngFor="let col of widget.Data.listColumn"> {{col}}</th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of widget.Data.meta | paginate: { itemsPerPage: 5, currentPage: page }">
+              <td *ngFor="let col of widget.Data.listColumn">{{item[col]}}</td>
+            </tr>   
+          </tbody>
+      </table>
+      <pagination-controls (pageChange)="page = $event"></pagination-controls>   
+  </div>
+</div>
+
+<app-widget-editting *ngIf="Editting == true" [isData] = "isData" [Widget]="widget" [Type] = "widget.Type" (closePopUp) = "switchPopUp()" (saveEdit) = "saveEdit($event)"></app-widget-editting>

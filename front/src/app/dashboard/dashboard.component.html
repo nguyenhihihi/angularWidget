@@ -1,0 +1,17 @@
+<app-dashboard-header></app-dashboard-header>
+<app-dashboard-title (changeMode) = "switchMode()" [mode] = "mode"></app-dashboard-title>
+
+<div  class="container">
+    <ng-container *ngFor = "let w of ListWidget">
+        <app-widget *ngIf = " w.Type == 'WIDGET_NULL' && mode == 2" [mode] = "mode" [widget] = "w" (editWidget) = "editWidget($event)" (deleteWidget) = "deleteWidget($event)"></app-widget>
+        <app-widget-database *ngIf = " w.Type == 'WIDGET_DATABASE'" [mode] = "mode" [widget] = "w" (editWidget) = "editWidget($event)" (deleteWidget) = "deleteWidget($event)"></app-widget-database>
+        <app-widget-chart *ngIf = " w.Type == 'WIDGET_CHART'" [mode] = "mode" [widget] = "w"       (editWidget) = "editWidget($event)" (deleteWidget) = "deleteWidget($event)"></app-widget-chart>
+    </ng-container>
+
+    <ng-container *ngIf="ListWidget?.length == 0">
+        <div class="center">
+                <span class="fas fa-exclamation-triangle bigsize"></span>
+              <h3>No widget's available.<br>Please switch to <p class="lightblue inline">VIEW MODE</p> to add a widget.</h3>
+        </div>
+    </ng-container>
+<div>

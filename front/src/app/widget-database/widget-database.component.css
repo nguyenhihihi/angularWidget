@@ -1,0 +1,42 @@
+.widget {
+    min-width: 350px;
+    min-height: 250px;
+    border: 2px solid	#C1C1C1;
+    display: inline-block;
+    margin: 10px 10px 0px 0px;
+    /* max-width: 380px;
+    max-height: 280px; */
+}
+
+.full {
+  
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100vw - 20px);
+    height: calc(100vh - 20px);
+    margin: 0px;
+    z-index: 50;
+}
+.textBody{
+    background-color: 	#ffffff;
+    /* min-height: 248px; */
+    position: relative;
+    text-align: center;
+}
+
+.dataBody{
+    background-color: 	#ffffff;
+    position: relative;
+}
+
+.body{
+    overflow: auto;
+    /* width: 350px; */
+    height: 240px;
+    float: left;
+    width: 100%;
+    min-width: 315x;
+    min-height: 215px;
+}

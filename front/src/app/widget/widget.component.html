@@ -1,0 +1,9 @@
+<div [class]="isFullScreen ? 'full' : 'widget'" [style.Width] = "widget.Width + 'px'" [style.Height] = "widget.Height + 'px'">
+  <app-widget-header [Name]="widget.Name" [mode]="mode" [Type]="widget.Type" [isFullScreen]="isFullScreen" (deleteWidget)="deleteWidgetAtWidgetCom()" (editWidget) = "switchPopUp()" (switchFullScreen) = "switchFullScreen()"></app-widget-header>
+  <div class = "blankContent body nullBody" [style.height] = "(widget.Height - 30) + 'px'">
+      <button (click) = "switchPopUp()" class = "middle blurButton">
+          <span class = "bigSize">&#43;</span>
+      </button>
+  </div>
+</div>
+<app-widget-editting *ngIf="Editting == true" [isData] = "isData" [Widget]="widget" [Type] = "widget.Type" (closePopUp) = "switchPopUp()" (saveEdit) = "saveEdit($event)"></app-widget-editting>

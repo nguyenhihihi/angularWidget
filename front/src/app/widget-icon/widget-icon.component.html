@@ -1,0 +1,21 @@
+<div *ngIf = 'Type == "WIDGET_NULL"'>
+    <button class="btnIcon" (click)="edit()">
+        <span class="fas fa-sun"></span>
+    </button>
+</div>
+
+<div *ngIf = 'Type != "WIDGET_NULL" && mode == 1'>
+        <button class="btnIcon" (click)="switchFullScreenAtIconCom()">
+            <span *ngIf="isFullScreen === false" class="fas fa-expand-arrows-alt"> </span>
+            <span *ngIf="isFullScreen === true" class="fas fa-compress"> </span>
+        </button>
+</div>
+
+<div *ngIf = 'Type != "WIDGET_NULL" && mode == 2'>
+        <button class="btnIcon" (click)="edit()"><span class="fas fa-sun"></span></button> &nbsp;
+        <button class="btnIcon" (click)="switchFullScreenAtIconCom()">
+            <span *ngIf="isFullScreen === false" class="fas fa-expand-arrows-alt"></span>
+            <span *ngIf="isFullScreen === true" class="fas fa-compress"> </span>
+        </button> &nbsp;
+        <button class="btnIcon" (click)="delete()"><span class="fas fa-times"></span></button>
+</div>

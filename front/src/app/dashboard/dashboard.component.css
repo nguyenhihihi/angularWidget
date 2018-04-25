@@ -1,0 +1,21 @@
+.inlineBlock{
+    display: inline-block;
+}
+
+.inline{
+    display: inline;
+}
+
+.bigsize{
+    font-size: 200%;
+    color: #e63900;
+}
+
+.center{
+    text-align: center;
+}
+
+.lightblue
+{
+    color: #17a2b8;
+}

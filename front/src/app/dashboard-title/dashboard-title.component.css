@@ -1,0 +1,21 @@
+.dashboardTitle {
+    color: #415E77;
+    font-weight: bold;
+    font-size: 130%;
+}
+
+.DBTitle {
+    margin-top: 20px;
+}
+
+.line{
+    color: red;
+    height: 10px;
+    border: 0;
+    border-top: 2px solid #1F537B;    
+}
+
+.fixSize{
+    height: 100%;
+    width: 100px;
+}

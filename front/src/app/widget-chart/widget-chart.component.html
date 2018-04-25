@@ -1,0 +1,32 @@
+<div [class]="isFullScreen ? 'full' : 'widget'" [style.width] = "isFullScreen ? '':widget.Width + 'px'" [style.height] = "isFullScreen ? '':widget.Height  + 'px'" >
+  <app-widget-header [Name]="widget.Name" [mode]= "mode" [Type]="widget.Type" [isFullScreen]="isFullScreen" (deleteWidget)="deleteWidgetAtChartCom()" (editWidget) = "switchPopUp()" (switchFullScreen) = "switchFullScreen()"></app-widget-header>
+  <div class="body chartBody" id = "piechart" style="padding-top: 20px;" [style.height] = "isFullScreen ? '80%':(widget.Height - 30) + 'px'" >
+      <svg *ngIf = "isGoodPieChart()" width="95%" height="95%" viewBox="0 0 42 42" class="donut">
+
+          <circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>
+          <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#d2d3d4" stroke-width="10"></circle>
+
+          <circle  *ngFor = "let col of arrayColName"  class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" [attr.stroke]="col.color" stroke-width="10" [attr.stroke-dasharray]="col.dasharray" [attr.stroke-dashoffset]="100 - col.drawed +25"></circle>
+          <g class="chart-text">
+              <text x="50%" y="50%" class="chart-number">
+                {{widget.Data.datasourceName}}
+              </text>
+            </g>
+        </svg>
+        <figcaption *ngIf = "isGoodPieChart()" class="figure-key">
+            <p class="sr-only">Donut chart showing 10 total beers. Two beers are Imperial India Pale Ales, four beers are Belgian Quadrupels, and three are Russian Imperial Stouts. The last remaining beer is unlabeled.</p>
+        
+            <ul class="figure-key-list" aria-hidden="true" role="presentation">
+              <li  *ngFor="let col of arrayColName" >
+                <span class="shape-circle" [style.background-color]="col.color"></span> {{col.col}}
+              </li>
+            </ul>
+          </figcaption>
+          <div *ngIf = "isGoodPieChart() == false">
+              <span class="fas fa-exclamation-triangle bigsize"></span>
+              <h3>Overload part of pie chart.</h3>
+          </div>
+  </div>
+</div>
+
+<app-widget-editting *ngIf="Editting == true" [isData] = "isData" [Widget]="widget" [Type] = "widget.Type" (closePopUp) = "switchPopUp()" (saveEdit) = "saveEdit($event)"></app-widget-editting>
